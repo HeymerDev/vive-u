@@ -1,0 +1,47 @@
+---
+import video from "../assets/video/video.mp4";
+---
+
+<section class="flex flex-col justify-center items-center p-6 gap-8 mt-10">
+  <h2 class="font-bold text-4xl md:text-7xl">Como Funciona?</h2>
+
+  <div class="flex flex-col md:flex-row w-[90%] justify-center gap-6">
+    <video class="md:w-[50%] w-full h-auto rounded shadow-sm" controls>
+      <source src={video} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="md:w-[40%] w-full text-justify">
+      <p>
+        Este video es una pequeña explicacion de la funcionalidad que se le
+        puede dar a nuestra plataforma. Veras detalladamente como se loguea un
+        administrador, como se crea un nuevo psicologo, como se gestiona este
+        mismo, eliminandolo, editandolo, y como se crea una nueva cita. tambien
+        veras como se loguea un estudiante y como obtiene informacion de todos
+        los psicologos y sus horarios disponibles. en pocas palabras veras cada
+        una de las funcionalidades que se le puede dar a nuestra plataforma y
+        cada una con su respectiva interfaz.
+      </p>
+
+      <div class="flex gap-8 mt-9">
+        <img
+          src="https://www.svgrepo.com/show/452234/java.svg"
+          alt="Java"
+          class="md:w-[200px] w-[100px]"
+        />
+
+        <img
+          src="https://www.svgrepo.com/show/303251/mysql-logo.svg"
+          alt="Mysql"
+          class="md:w-[200px] w-[100px]"
+        />
+
+        <img
+          src="https://www.svgrepo.com/show/373446/astro.svg"
+          alt="Astro"
+          class="md:w-[200px] w-[100px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
