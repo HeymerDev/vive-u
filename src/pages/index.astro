@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Hero from "../views/Hero.astro";
+import About from "../views/About.astro";
+
+import Pricing from "../views/Pricing.astro";
+---
+
+<Layout title="Vive U">
+  <Hero />
+  <Pricing />
+</Layout>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+  * {
+    font-family: "Ubuntu", sans-serif;
+  }
+</style>

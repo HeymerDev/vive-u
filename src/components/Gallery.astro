@@ -1,0 +1,22 @@
+---
+import ImageGallery from "./ImageGallery.astro";
+import inicio from "../assets/images/inicio.png";
+import listar from "../assets/images/listar.png";
+import eliminar from "../assets/images/eliminar.png";
+import modificar from "../assets/images/modificar.png";
+import registrar from "../assets/images/registrar.png";
+import paneAdmin from "../assets/images/paneAdmin.png";
+
+const images = [
+  { src: inicio, alt: "Inicio" },
+  { src: listar, alt: "Listar" },
+  { src: eliminar, alt: "Eliminar" },
+  { src: modificar, alt: "Modificar" },
+  { src: registrar, alt: "Registrar" },
+  { src: paneAdmin, alt: "Panel de administración" },
+];
+---
+
+<div class="grid md:grid-cols-6 gap-4">
+  {images.map((image) => <ImageGallery src={image.src} alt={image.alt} />)}
+</div>

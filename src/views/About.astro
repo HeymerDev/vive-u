@@ -1,0 +1,67 @@
+---
+import Gallery from "../components/Gallery.astro";
+import CardAbout from "../components/cards/CardAbout.astro";
+
+const cardsInformation = [
+  {
+    title: "Acceder a un Psicologo",
+    description:
+      "Accede a un Psicologo de manera rapida y sencilla, sin tener que esperar semanas para una cita, Ni dirigirte a las oficinas de Bienestar Universitario.",
+  },
+  {
+    title: "Administra La Lista de Psicologos",
+    description:
+      "Administra la lista de psicologos, añadiendo, eliminando y actualizando la informacion de los psicologos.",
+  },
+  {
+    title: "Administra La Lista de Estudiantes",
+    description:
+      "Administra la lista de estudiantes, añadiendo, eliminando y actualizando la informacion de los estudiantes.",
+  },
+  {
+    title: "Interfaz Intuitiva",
+    description:
+      "Interfaz intuitiva y facil de usar, para que puedas acceder a la informacion que necesitas de manera rapida y sencilla.",
+  },
+];
+---
+
+<section class="grid place-items-center p-6 gap-6 mt-8">
+  <h2 class="font-extrabold text-4xl md:text-6xl">VIVE-U</h2>
+  <div class="p-6 md:p-8 md:w-[85%]">
+    <p>
+      En el dinámico entorno académico de la Corporación Universitaria
+      Latinoamericana, el afán por el conocimiento y el crecimiento personal
+      puede, en ocasiones, presentar desafíos que se extienden más allá del
+      aula. VIVE-U emerge como un oasis de esperanza, ofreciendo a los
+      estudiantes de la CUL una puerta de entrada conveniente y accesible al
+      apoyo en salud mental, garantizando que su bienestar siga siendo una
+      prioridad fundamental.
+    </p>
+    <p>
+      Los servicios de VIVE-U van más allá de las sesiones de consejería
+      individuales. La plataforma ofrece una gama de recursos, que incluyen
+      guías de autoayuda, técnicas de atención plena y materiales educativos, lo
+      que empodera a los estudiantes para que gestionen proactivamente su salud
+      mental y cultiven la resiliencia.
+    </p>
+    <p>
+      VIVE-U se ha construido utilizando tecnologías de vanguardia para
+      garantizar un rendimiento óptimo y una experiencia de usuario fluida. La
+      plataforma aprovecha el poder de Java para la parte gráfica, utilizando
+      JForm para crear interfaces intuitivas y MySQL para gestionar la base de
+      datos de manera eficiente.
+    </p>
+  </div>
+
+  <h3 class="font-extrabold text-4xl md:text-6xl">Servimos Para</h3>
+  <div class="flex flex-col md:flex-row items-center gap-4">
+    {
+      cardsInformation.map((card) => (
+        <CardAbout title={card.title} description={card.description} />
+      ))
+    }
+  </div>
+
+  <Gallery />
+</section>

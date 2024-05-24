@@ -1,0 +1,65 @@
+---
+import CardPricing from "../components/cards/CardPricing.astro";
+
+const pricingInformation = [
+  {
+    title: "Gratis",
+    price: 0,
+    duration: "1 mes",
+    features: [
+      "20 User",
+      "20 Psicologos",
+      "Administra el Sistema",
+      "Soporte no prioritario",
+    ],
+  },
+  {
+    title: "Pro",
+    price: 200000,
+    duration: "1 mes",
+    features: [
+      "100 User",
+      "100 Psicologos",
+      "Administra el Sistema",
+      "Soporte prioritario",
+    ],
+  },
+  {
+    title: "Enterprise",
+    price: 500000,
+    duration: "1 mes",
+    features: [
+      "Ilimitado User",
+      "Ilimitado Psicologos",
+      "Administra el Sistema",
+      "Soporte prioritario",
+    ],
+  },
+
+  {
+    title: "Enterprise Pro",
+    price: 1200000,
+    duration: "1 año",
+    features: [
+      "Ilimitado User",
+      "Ilimitado Psicologos",
+      "Administra el Sistema",
+      "Obten Estadisticas sobre los estudios realizados",
+    ],
+  },
+];
+---
+
+<section class="grid place-items-center gap-4 p-6 mt-8">
+  <h4 class="font-bold text-4xl md:text-7xl">Precios</h4>
+  <p class="font-medium">
+    ¿Interesado en trabajar con nosotros? Consulta nuestros precios. Contáctanos
+    para una cotización personalizada. ¡No lo pienses más! Da el primer paso
+    para alcanzar tus metas.
+  </p>
+  <div
+    class="flex md:flex-row flex-col gap-8 w-full items-center justify-center"
+  >
+    {pricingInformation.map((pricing) => <CardPricing {...pricing} />)}
+  </div>
+</section>
