@@ -9,10 +9,8 @@ interface props {
 const { src, alt } = Astro.props;
 ---
 
-<div>
-  <Image
-    src={src}
-    alt={alt}
-    class="h-auto max-w-[350px] rounded-lg md:w-[250px]"
-  />
-</div>
+<Image
+  src={src}
+  alt={alt}
+  class="md:w-[400px] w-[350px] h-[250px] md:h-[350px] rounded-lg object-cover"
+/>
